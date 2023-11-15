@@ -1,0 +1,40 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Customer Edit</title>
+
+</head>
+
+<body>
+<h1> Customer Edit</h1>
+<form  th:action="@{/saveCustomer}" method="post" th:object="${customer}">
+        <div class="mb-3">
+            <label for="customerid" class="form-label">Customer ID</label>
+            <input type="text" required th:field="*{id}" class="form-control" id="customerid" name="customerid" placeholder="874758IUNS">
+        </div>
+    <div class="mb-3">
+        <label for="name" class="form-label">Customer Name</label>
+        <input type="text"  th:field="*{name}"  class="form-control" required id="name" name="name" placeholder="rahul varma">
+    </div>
+
+
+
+
+    <div class="mb-3">
+        <label for="address" class="form-label">Address</label>
+        <input type="text" th:field="*{address}" class="form-control" required id="address" name="address" placeholder="H.no , colony,city,state">
+    </div>
+    <div class="mb-3">
+        <label for="phonenumber" class="form-label">Phone Number</label>
+        <input type="number" th:field="*{phonenumber}" class="form-control" required id="phonenumber" name="phonenumber" placeholder="9082878432">
+    </div>
+
+
+
+    <button type="submit" class="btn btn-success btn-lg btn-block">Edit Customer</button>
+</form>
+
+</body>
+</html>
